@@ -2,45 +2,92 @@
 <html lang="cz">
 <head>
     <meta charset="UTF-8">
-    <title>Bizarní třídicí algoritmy</title>
+    <title>Třídicí algoritmy – přehled</title>
 </head>
 <body>
 
-<h1>Bizarní třídicí algoritmy</h1>
+<h1>Třídicí algoritmy</h1>
 
 <p>
-    Vedle seriózních algoritmů existují i algoritmy,
-    které vznikly jako vtip nebo satira.
-    Tyto algoritmy nejsou prakticky použitelné,
-    ale pomáhají ilustrovat vlastnosti třídění.
+Třídicí algoritmy slouží k uspořádání dat podle zvoleného klíče.
+Patří mezi základní problémy algoritmiky a jejich vlastnosti
+mají zásadní vliv na efektivitu programů pracujících s velkým
+množstvím dat.
 </p>
 
-<img src="https://i.redd.it/x05kcnz6cqv61.jpg" alt="Bizzare algorithms" width="350">
+<img src="data:image/png;base64,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" alt="Schéma třídění" width="450">
 
-<h2>Stalin Sort</h2>
+<h2>Základní vlastnosti</h2>
 <p>
-    Algoritmus, který projde vstup zleva doprava
-    a odstraní každý prvek, který porušuje vzestupné pořadí.
-    Výsledkem není permutace vstupu, ale pouze
-    setříděná podposloupnost.
+Algoritmy lze porovnávat podle několika kritérií:
 </p>
 
-<h2>Bogo Sort</h2>
+<ul>
+    <li><em>Časová složitost</em> – počet operací v závislosti na velikosti vstupu</li>
+    <li><em>Paměťová náročnost</em> – zda algoritmus pracuje na místě (in-place)</li>
+    <li><em>Stabilita</em> – zachování pořadí prvků se stejným klíčem</li>
+</ul>
+
+<h2>Klasické třídicí algoritmy</h2>
+
+<h3>Bubble Sort</h3>
 <p>
-    Náhodně permutuje prvky, dokud nejsou setříděné.
-    Očekávaná časová složitost je extrémně vysoká
-    a algoritmus je prakticky nepoužitelný.
+    Jednoduchý algoritmus, který opakovaně prochází pole a prohazuje
+    sousední prvky v nesprávném pořadí. Je velmi pomalý
+    (časová složitost O(n²)) a používá se především pro výuku.
 </p>
 
-<h2>Divine Sort</h2>
+<h3>Insertion Sort</h3>
 <p>
-    Hypotetický algoritmus, který se spoléhá
-    na božský zásah. Pokud není vstup setříděný,
-    algoritmus selže.
+    Algoritmus, který postupně vkládá prvky na správné místo
+    do již setříděné části pole. Je efektivní pro malé nebo
+    téměř setříděné vstupy a často se používá jako doplněk
+    rychlejších algoritmů.
+</p>
+
+<h3>Selection Sort</h3>
+<p>
+    V každém kroku vybere nejmenší prvek ze zbytku pole
+    a umístí ho na správné místo. Má vždy kvadratickou
+    časovou složitost a je nestabilní.
+</p>
+
+<h2>Efektivní algoritmy</h2>
+
+<h3>Merge Sort</h3>
+<p>
+    Stabilní algoritmus založený na metodě rozděl a panuj.
+    Pole rozdělí na menší části, ty rekurzivně setřídí
+    a následně sloučí. Má garantovanou časovou složitost
+    O(n log n), ale vyžaduje dodatečnou paměť.
+</p>
+
+<h3>Quick Sort</h3>
+<p>
+    Velmi rychlý algoritmus v praxi, který rozděluje pole
+    podle zvoleného pivotu. Průměrná složitost je O(n log n),
+    ale v nejhorším případě může být O(n²).
+    Správná volba pivotu je proto klíčová.
+</p>
+
+<h3>Heap Sort</h3>
+<p>
+    Algoritmus využívající haldu (heap). Má garantovanou
+    časovou složitost O(n log n) a pracuje na místě,
+    ale v praxi bývá pomalejší než Quick Sort.
+</p>
+
+<h2>Odkazy</h2>
+<p>
+Podrobnější informace:
+<a href="https://en.wikipedia.org/wiki/Sorting_algorithm" target="_blank">
+Wikipedia – Sorting algorithms
+</a>
 </p>
 
 <p>
-<a href="index.html">Zpět na seriózní část</a>
+Pro odlehčení tématu:
+<a href="druha.html">Bizarní třídicí algoritmy</a>
 </p>
 
 </body>
