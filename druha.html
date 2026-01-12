@@ -2,46 +2,91 @@
 <html lang="cz">
 <head>
     <meta charset="UTF-8">
-    <title>Bizarní třídicí algoritmy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bizarní algoritmy – Když se nedaří</title>
+    <link rel="stylesheet" href="hlavni.css">
 </head>
 <body>
 
-<h1>Bizarní třídicí algoritmy</h1>
+<header>
+    <h1>Bizarní a ezoterické třídění</h1>
+    <p>Neefektivní, ale zábavné způsoby řazení</p>
+</header>
 
-<p>
-    Vedle seriózních algoritmů existují i algoritmy,
-    které vznikly jako vtip nebo satira.
-    Tyto algoritmy nejsou prakticky použitelné,
-    ale pomáhají ilustrovat vlastnosti třídění.
-</p>
+<nav class="top-nav">
+    <ul>
+        <li><a href="index.html">Klasické algoritmy</a></li>
+        <li><a href="druha.html" class="active">Bizarní algoritmy</a></li>
+    </ul>
+</nav>
 
-<img src="https://i.redd.it/x05kcnz6cqv61.jpg" alt="Bizzare algorithms" width="350">
+<div class="container">
 
-<h2>Stalin Sort</h2>
-<p>
-    Algoritmus, který projde vstup zleva doprava
-    a odstraní každý prvek, který porušuje vzestupné pořadí.
-    Výsledkem není permutace vstupu, ale pouze
-    setříděná podposloupnost.
-</p>
+    <main>
+        <h2>Proč existují?</h2>
+        <p>
+            Vedle seriózních algoritmů existují i takové, které vznikly jako vtip, satira nebo experiment.
+            Nikdy je nepoužívejte v reálném softwaru (pokud nechcete být vyhozeni), ale jsou skvělé pro pochopení toho, co dělá algoritmus "dobrým".
+        </p>
 
-<h2>Bogo Sort</h2>
-<p>
-    Náhodně permutuje prvky, dokud nejsou setříděné.
-    Očekávaná časová složitost je extrémně vysoká
-    a algoritmus je prakticky nepoužitelný.
-</p>
+        <img src="https://i.redd.it/x05kcnz6cqv61.jpg" alt="Meme o třídicích algoritmech" class="schema">
 
-<h2>Divine Sort</h2>
-<p>
-    Hypotetický algoritmus, který se spoléhá
-    na božský zásah. Pokud není vstup setříděný,
-    algoritmus selže.
-</p>
+        <h3 id="stalin">Stalin Sort</h3>
+        <p>
+            Algoritmus inspirovaný diktátorským režimem. Prochází pole a jakýkoliv prvek, který není ve správném pořadí (je menší než předchozí), je okamžitě <strong>zlikvidován</strong> (smazán).
+        </p>
+        <div class="info-box">
+            <strong>Výsledek:</strong> Data jsou sice seřazená, ale většina chybí.
+        </div>
+        <a href="https://github.com/gustavo-depaula/stalin-sort" target="_blank" class="wiki-link">Více o Stalin Sort ;</a>
 
-<p>
-<a href="index.html">Zpět na seriózní část</a>
-</p>
+        <h3 id="bogo">Bogo Sort</h3>
+        <p>
+            Také známý jako "Stupid Sort". Zamíchá pole náhodně jako balíček karet. Pak zkontroluje, zda je seřazené. Pokud ne, zamíchá ho znovu. A znovu.
+        </p>
+        <div class="info-box">
+            <strong>Složitost:</strong> Teoreticky nekonečná. Může běžet déle než stáří vesmíru.
+        </div>
+        <a href="https://en.wikipedia.org/wiki/Bogosort" target="_blank" class="wiki-link">Wiki: Bogo Sort ;</a>
+
+        <h3 id="sleep">Sleep Sort</h3>
+        <p>
+            Pro každé číslo v poli vytvoří nové vlákno (proces), které "spí" tolik milisekund, jaká je hodnota čísla. Až se vzbudí, vypíše se. Menší čísla se vzbudí dříve.
+        </p>
+        <div class="info-box">
+            <strong>Problém:</strong> Funguje jen pro kladná čísla a je závislý na plánovači procesoru.
+        </div>
+        <a href="https://rosettacode.org/wiki/Sorting_algorithms/Sleep_sort" target="_blank" class="wiki-link">Více o Sleep Sort ;</a>
+
+        <h3 id="divine">Divine Sort</h3>
+        <p>
+            (Inteligentní design). Algoritmus předpokládá, že pole je již setříděné vůlí vyšší moci. Zkontroluje ho, a pokud setříděné není, vyhodí chybu, protože v takovém vesmíru odmítá pracovat.
+        </p>
+
+    </main>
+
+    <aside>
+        <div class="sidebar-content">
+            <h3>Navigace v bizáru</h3>
+            <ul>
+                <li><a href="#stalin">Stalin Sort</a></li>
+                <li><a href="#bogo">Bogo Sort</a></li>
+                <li><a href="#sleep">Sleep Sort</a></li>
+                <li><a href="#divine">Divine Sort</a></li>
+            </ul>
+            
+            <h3>Návrat</h3>
+            <ul>
+                 <li><a href="index.html"> Zpět na seriózní web</a></li>
+            </ul>
+        </div>
+    </aside>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Algoritmy | Vytvořeno pro GitHub Pages</p>
+</footer>
 
 </body>
 </html>

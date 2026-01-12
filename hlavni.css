@@ -1,0 +1,180 @@
+/* Resetování stylů */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Obecné nastavení */
+body {
+    font-family: Arial, sans-serif; /* Podle vzoru */
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Hlavička */
+header {
+    background-color: #0e5503; 
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+/* Podnadpis v hlavičce - vycentrovaný */
+header p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 0;
+}
+
+/* Hlavní navigace (stránky) */
+nav.top-nav {
+    background-color: #333; /* Tmavá ze vzoru */
+}
+
+nav.top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav.top-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-weight: bold;
+}
+
+nav.top-nav ul li a:hover, 
+nav.top-nav ul li a.active {
+    background-color: #3cac2a; /* Světlejší oranžová při najetí */
+}
+
+/* --- Layout (Obecný kontejner pro vycentrování na střed) --- */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    overflow: hidden; /* Aby floaty nepadaly ven */
+}
+
+/* Hlavní obsah (vlevo) */
+main {
+    float: left;
+    width: 70%;
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* Postranní panel (vpravo) */
+aside {
+    float: right;
+    width: 28%;
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* Sekce a texty */
+section h2, main h2 {
+    color: #333;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+h3 {
+    color: #3cac2a;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Obrázky */
+img.schema {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Boxy s informacemi */
+.info-box {
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.wiki-link {
+    color: #789e72;
+    text-decoration: underline;
+}
+
+/* Odkazy v postranním panelu */
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+aside ul li a:hover {
+    color: #3cac2a;
+}
+
+/* Patička */
+footer {
+    clear: both; /* Zruší vliv floatů nad sebou */
+    background-color: #0e5503; 
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* ===== Responzivní design (Podle vzoru) ===== */
+
+/* Pro obrazovky menší než 768px */
+@media (max-width: 768px) {
+    nav.top-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main, aside {
+        width: 100%;
+        float: none;
+        padding: 15px;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+
+/* Pro obrazovky menší než 480px */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    header p {
+        font-size: 0.9em;
+    }
+}
