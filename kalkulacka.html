@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="kalkulacka.css" rel="stylesheet">
+  <title>Kalkulačka</title>
+</head>
+<body>
+  <h1>Kalkulačka</h1>
+
+  <div class="panel">
+    <div id="vysledek">—</div>
+
+    <div id="radek">
+      <input id="vstup1" inputmode="decimal" placeholder="Číslo 1">
+      <span id="opSymbol" aria-hidden="true">+</span>
+      <input id="vstup2" inputmode="decimal" placeholder="Číslo 2">
+    </div>
+
+    <div class="tlacitka">
+      <button id="tlPlus">+</button>
+      <button id="tlMinus">−</button>
+      <button id="tlKrat">×</button>
+      <button id="tlDeleno">÷</button>
+    </div>
+  </div>
+
+  <script src="kalkulacka.js"></script>
+</body>
+</html>
